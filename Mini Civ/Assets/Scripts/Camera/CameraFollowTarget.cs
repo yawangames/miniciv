@@ -6,6 +6,7 @@ public class CameraFollowTarget : MonoBehaviour
 {
     public Transform target;
     public float smooth = 0.01f;
+    
     public Vector3 defaultOffset;
 
 
