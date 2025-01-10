@@ -2,7 +2,7 @@ using UnityEngine;
 
 public class GridCreate : MonoBehaviour
 {
-    public GameObject cellObject;
+    public Cell cellObject;
 
     float offsetX;
     float offsetZ;
@@ -37,7 +37,8 @@ public class GridCreate : MonoBehaviour
         if (cellCoordinates.y % 2 == 1)
             posX += offsetX * .5f;
 
-        GameObject newCell = Instantiate(cellObject, transform);
+        Cell newCell = Instantiate(cellObject, transform);
         newCell.transform.position = new Vector3 (posX, 0,posZ);
+        newCell.name = "cell_"+ cellCoordinates.x.ToString()+"_"+ cellCoordinates.y.ToString();
     }
 }
