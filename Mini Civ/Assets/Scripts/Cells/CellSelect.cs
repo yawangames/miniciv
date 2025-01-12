@@ -5,7 +5,7 @@ public class CellSelect : MonoBehaviour
 {
     public void Select()
     {
-        BuildingManager.Instance.selectedCell = GetComponent<Cell>();
+        BuildingManager.Instance.SelectCell(GetComponent<Cell>());
 
         var actions = GetComponents<ICellSelect>();
 

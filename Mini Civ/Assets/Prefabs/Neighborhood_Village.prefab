@@ -2497,7 +2497,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   citizenObject: {fileID: 83694604336649275, guid: 89bb40cb7fde60b42af39e6da2b945f9, type: 3}
-  citizenCount: 1
+  citizenCount: 2
   citizens: []
 --- !u!1 &8024444634281954834
 GameObject:

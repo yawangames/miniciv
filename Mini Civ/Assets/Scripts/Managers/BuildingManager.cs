@@ -6,8 +6,11 @@ public class BuildingManager : MonoBehaviour
 {    
     public static BuildingManager Instance;
 
-    public List<Neighborhood> neighborhoods = new List<Neighborhood>();
     public Cell selectedCell;
+    public GameObject selectedFeedback;
+
+
+    public List<Neighborhood> neighborhoods = new List<Neighborhood>();
 
     private void Awake()
     {
@@ -16,14 +19,9 @@ public class BuildingManager : MonoBehaviour
 
     public void TryBuildNeighborhood(Neighborhood neighborhood)
     {
-        Debug.Log("Try build");
         if (!selectedCell) return;
 
-        Debug.Log("Cell selected: "+selectedCell.name);
-
         if (!selectedCell.Buildable()) return;
-
-        Debug.Log("Cell selected is buildable ");
 
         BuildNeighborhood(neighborhood);
     }
@@ -33,5 +31,18 @@ public class BuildingManager : MonoBehaviour
         Neighborhood newNeighborhood = Instantiate(neighborhood, selectedCell.transform.position, Quaternion.identity);
         neighborhoods.Add(newNeighborhood);
         selectedCell.AddNeighborhood(newNeighborhood);
+    }
+
+    public void SelectCell(Cell cell)
+    { 
+        selectedCell = cell;
+        selectedFeedback.SetActive(true);
+        selectedFeedback.transform.position = cell.transform.position;
+    }
+
+    public void UnselectCell()
+    {
+        selectedCell = null;
+        selectedFeedback.SetActive(false);
     }
 }

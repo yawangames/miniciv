@@ -6,7 +6,6 @@ public class BuildNeighborhood : MonoBehaviour
 
     public void Build()
     {
-        Debug.Log("Click build");
         BuildingManager.Instance.TryBuildNeighborhood(Neighborhood);
     }
 }
