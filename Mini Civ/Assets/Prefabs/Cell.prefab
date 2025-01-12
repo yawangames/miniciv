@@ -10,6 +10,9 @@ GameObject:
   m_Component:
   - component: {fileID: 5365103160959330030}
   - component: {fileID: 2016315362574372852}
+  - component: {fileID: 4192671316304854673}
+  - component: {fileID: 1235016495214778488}
+  - component: {fileID: -8111362444163196750}
   m_Layer: 0
   m_Name: Cell
   m_TagString: Untagged
@@ -25,7 +28,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 4787899640576604441}
   serializedVersion: 2
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
@@ -45,6 +48,44 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 63cf3af11056fb140883a79f1afaa2aa, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  CurrentNeighborhood: {fileID: 0}
+--- !u!114 &4192671316304854673
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4787899640576604441}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 191546644988c33489b0bd734b9f9504, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &1235016495214778488
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4787899640576604441}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b486b63ca0d48b3449a967e900af2633, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &-8111362444163196750
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4787899640576604441}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 962b8adacfd3f1d43bcd8b5837725de6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  emptyOptions: {fileID: 11400000, guid: 41423efae437a124b80970c21c3bdbec, type: 2}
 --- !u!1 &7972647794827240721
 GameObject:
   m_ObjectHideFlags: 0
@@ -791,7 +832,7 @@ MonoBehaviour:
   m_PreserveMeshAssetOnDestroy: 0
   assetGuid: 
   m_Mesh: {fileID: 0}
-  m_VersionIndex: 1205
+  m_VersionIndex: 1208
   m_IsSelectable: 1
   m_SelectedFaces: 
   m_SelectedEdges: []

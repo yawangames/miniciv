@@ -1,16 +1,21 @@
 using UnityEngine;
+using UnityEngine.UIElements;
 
 public class Cell : MonoBehaviour
 {
-    // Start is called once before the first execution of Update after the MonoBehaviour is created
-    void Start()
+
+    public Neighborhood CurrentNeighborhood;
+
+    public void AddNeighborhood(Neighborhood neighborhood)
     {
-        
+        CurrentNeighborhood = neighborhood;
     }
 
-    // Update is called once per frame
-    void Update()
+    public bool Buildable()
     {
-        
+        if(CurrentNeighborhood != null)
+            return false;
+
+        return true;
     }
 }
