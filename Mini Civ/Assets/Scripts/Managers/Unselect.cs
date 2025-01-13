@@ -12,6 +12,7 @@ public class Unselect : MonoBehaviour
 
     public void DoUnselect()
     {
+
         var actions = GetComponents<IUnselectAction>();
 
         foreach (var action in actions)
