@@ -2460,9 +2460,9 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 8832024404288499039}
-  - component: {fileID: 3639240388821390417}
+  - component: {fileID: 7170774106640406253}
   m_Layer: 0
-  m_Name: Neighborhood_Village
+  m_Name: Houses
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -2484,7 +2484,7 @@ Transform:
   - {fileID: 3307887813192725761}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &3639240388821390417
+--- !u!114 &7170774106640406253
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -2493,12 +2493,10 @@ MonoBehaviour:
   m_GameObject: {fileID: 7908815903930469136}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 5de687bb6661ecf4c97cb1cbf2c99845, type: 3}
+  m_Script: {fileID: 11500000, guid: a94ca44d09628e6438ef7b540f189753, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  citizenObject: {fileID: 83694604336649275, guid: 89bb40cb7fde60b42af39e6da2b945f9, type: 3}
-  citizenCount: 2
-  citizens: []
+  associatedVillage: {fileID: 0}
 --- !u!1 &8024444634281954834
 GameObject:
   m_ObjectHideFlags: 0

@@ -3206,6 +3206,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 37c877479a3015345b66d2f08d462e35, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  village: {fileID: 3639240388821390417, guid: b9db0a2a664bf11438e581ef2299ef31, type: 3}
   selectedCell: {fileID: 0}
   selectedFeedback: {fileID: 1999451184}
   neighborhoods: []

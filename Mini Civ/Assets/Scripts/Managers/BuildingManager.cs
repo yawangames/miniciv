@@ -6,6 +6,8 @@ public class BuildingManager : MonoBehaviour
 {    
     public static BuildingManager Instance;
 
+    public Village village;
+
     public Cell selectedCell;
     public GameObject selectedFeedback;
 
@@ -16,21 +18,14 @@ public class BuildingManager : MonoBehaviour
     {
         Instance = this;
     }
-
-    public void TryBuildNeighborhood(Neighborhood neighborhood)
+    public void TryBuildVillage()
     {
         if (!selectedCell) return;
 
         if (!selectedCell.Buildable()) return;
 
-        BuildNeighborhood(neighborhood);
-    }
-
-    void BuildNeighborhood(Neighborhood neighborhood)
-    {
-        Neighborhood newNeighborhood = Instantiate(neighborhood, selectedCell.transform.position, Quaternion.identity);
-        neighborhoods.Add(newNeighborhood);
-        selectedCell.AddNeighborhood(newNeighborhood);
+        Village newVillage = Instantiate(village, selectedCell.transform.position, Quaternion.identity);
+        newVillage.GetComponent<Village>().OnBuildVillage();
     }
 
     public void SelectCell(Cell cell)

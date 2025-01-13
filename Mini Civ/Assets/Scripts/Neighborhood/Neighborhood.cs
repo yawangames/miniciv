@@ -2,5 +2,6 @@ using UnityEngine;
 
 public class Neighborhood : MonoBehaviour
 {
-    public Citizen citizenObject;
+    public Village associatedVillage;
+
 }
