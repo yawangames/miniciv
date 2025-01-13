@@ -11,12 +11,6 @@ public class HighlightedCell : MonoBehaviour
         Instance = this;
     }
 
-    private void Update()
-    {
-        if (Input.GetMouseButtonDown(0))
-            SelectCell();
-    }
-
     void FixedUpdate()
     {        
         Ray ray = Camera.main.ScreenPointToRay(Input.mousePosition);
@@ -30,15 +24,6 @@ public class HighlightedCell : MonoBehaviour
             StopHighlight();
     }
 
-    void SelectCell()
-    {
-        if (BuildingManager.Instance.selectedCell != null) return;
-
-        if (highlightedCell == null) return;
-
-        highlightedCell.GetComponent<CellSelect>().Select();
-    }
-
     void HighlightCell(Cell cell)
     {
         highlightedCell = cell;
@@ -49,6 +34,5 @@ public class HighlightedCell : MonoBehaviour
     {
         highlightedCell = null;
         transform.position = Vector3.zero;
-
     }
 }
