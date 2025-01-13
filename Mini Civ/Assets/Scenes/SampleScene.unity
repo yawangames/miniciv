@@ -354,6 +354,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Target: {fileID: 1542597453}
   moveSpeed: 0.015
+  unselect: {fileID: 820419483}
 --- !u!114 &330585549
 MonoBehaviour:
   m_ObjectHideFlags: 0

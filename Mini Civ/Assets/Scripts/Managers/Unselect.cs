@@ -6,14 +6,15 @@ public class Unselect : MonoBehaviour
     {
         if (Input.GetMouseButtonDown(1))
         {
-            var actions = GetComponents<IUnselectAction>();
-
-            foreach (var action in actions)
-            {
-                action.Unselect();
-            }
-
+            DoUnselect();
         }
+    }
 
+    public void DoUnselect()
+    {
+        var actions = GetComponents<IUnselectAction>();
+
+        foreach (var action in actions)
+            action.Unselect();
     }
 }
